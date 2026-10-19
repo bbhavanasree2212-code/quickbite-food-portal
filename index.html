@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite - Food Ordering</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #fff7ed; color: #333; text-align: center; }
+    header { background: #ea580c; color: white; padding: 30px; }
+    main { padding: 35px 15px; }
+    .menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .item { background: white; padding: 20px; border-radius: 12px; width: 180px; box-shadow: 0 2px 8px #ddd; }
+    .price { color: #c2410c; font-weight: bold; }
+    button { background: #ea580c; color: white; border: 0; border-radius: 6px; padding: 10px 16px; cursor: pointer; }
+    footer { padding: 20px; background: #ffedd5; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>QuickBite</h1>
+    <p>Fresh food, delivered with love!</p>
+  </header>
+  <main>
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="item"><h3>🍕 Pizza</h3><p class="price">₹199</p><button onclick="order('Pizza')">Order Now</button></div>
+      <div class="item"><h3>🍔 Burger</h3><p class="price">₹129</p><button onclick="order('Burger')">Order Now</button></div>
+      <div class="item"><h3>🍜 Noodles</h3><p class="price">₹149</p><button onclick="order('Noodles')">Order Now</button></div>
+    </div>
+    <p id="message" aria-live="polite"></p>
+  </main>
+  <section style="padding:30px; background:#fff7ed;">
+    <h2 style="color:#c2410c;">Thank You for Choosing QuickBite!</h2>
+    <p>We appreciate your order. Enjoy your delicious meal!</p>
+  </section>
+  <footer>QuickBite Food Ordering Portal</footer>
+  <script>
+    function order(food) {
+      document.getElementById('message').textContent =
+        'Thank you! Your ' + food + ' order has been selected.';
+    }
+  </script>
+</body>
+</html>
